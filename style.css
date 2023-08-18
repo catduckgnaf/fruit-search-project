@@ -1,46 +1,74 @@
+/* Reset some default styles */
 * {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-:focus {
- /* TODO */
-}
-
+/* Set basic styles for the body */
 body {
-  /* TODO */
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #3498db, #e74c3c);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
 }
 
-input {
- /* TODO */
-}
-
+/* Center the search container */
 .search-container {
- /* TODO */
-}
-.search-container input,
-.search-container .suggestions {
-  /* TODO */
-}
-.search-container input {
- /* TODO */
-}
-.search-container .suggestions {
-   /* TODO */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-ul {
-  /* TODO */
-}
-ul.has-suggestions {
-  /* TODO */
-}
-ul li {
-  /* TODO */
-}
-ul li:hover {
-  /* TODO */
-}
-
+/* Style the input */
 input {
-   /* TODO */
+  width: 100%;
+  max-width: 400px; /* Limit the width to 400px */
+  padding: 10px;
+  border: none; /* Remove the border */
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.2); /* Add a transparent background */
+  color: #fff; /* Set the text color to white */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  margin-bottom: 5px; /* Add margin to separate from suggestions */
 }
+
+/* Style the suggestions container */
+.suggestions {
+  width: 100%;
+  max-width: 400px; /* Limit the width to 400px */
+  max-height: 200px;
+  overflow-y: auto;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  background-color: #020202;
+  margin-top: 5px; /* Add a little margin to separate from the input */
+}
+
+/* Style each suggestion item */
+ul li {
+  list-style-type: none;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Highlight the suggestion on hover */
+ul li:hover {
+  background-color: #d01a1a;
+}
+
+/* Add a class to the suggestions container when suggestions are present */
+ul.has-suggestions {
+  display: block;
+}
+
+/* Hide the suggestions container when no suggestions are present */
+ul:not(.has-suggestions) {
+  display: block;
