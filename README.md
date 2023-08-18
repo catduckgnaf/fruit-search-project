@@ -2,4 +2,4 @@ A search bar that allows users to input a fruit and provides suggestions based o
 
 Tools: HTML, CSS, JavaScript
 
-Live Demo: 
+Live Demo: https://catduckgnaf.github.io/fruit-search-project/
